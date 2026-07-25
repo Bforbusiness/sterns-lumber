@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sterns Lumber Co., Inc. — Lumber, Building Supplies, Rentals &amp; U-Haul | Millinocket, ME</title>
+<meta name="description" content="Sterns Lumber Co., Inc. — Millinocket, Maine's lumber yard since 1838. Lumber &amp; building supplies, equipment rentals, propane refills, local delivery, and authorized U-Haul dealer. 40 Balsam Dr, Millinocket ME. (207) 723-5144.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sterns Lumber Co., Inc. — Millinocket, ME">
+<meta property="og:description" content="Lumber &amp; building supplies, equipment rentals, propane refills, and U-Haul — serving Millinocket since 1838.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HardwareStore",
+  "name": "Sterns Lumber Co., Inc.",
+  "description": "Lumber yard and building supply store in Millinocket, Maine, serving contractors and DIYers since 1838. Equipment rentals, propane tank refills, lumber delivery, and authorized U-Haul dealer.",
+  "foundingDate": "1838",
+  "telephone": "+1-207-723-5144",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "40 Balsam Dr",
+    "addressLocality": "Millinocket",
+    "addressRegion": "ME",
+    "postalCode": "04462",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:30",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "16:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "08:00",
+      "closes": "12:00"
+    }
+  ]
+}
+</script>
+<style>
+  /* ============================================================
+     STERNS LUMBER CO., INC. — Single-file prototype
+     Signage typography: Arial Black, uppercase, letterspaced,
+     white-on-charcoal to match the physical storefront.
+     ============================================================ */
+  :root {
+    --charcoal: #1c1d21;
+    --charcoal-2: #26272c;
+    --charcoal-3: #313238;
+    --amber: #f59e0b;
+    --amber-dark: #d97706;
+    --wood: #8a5a33;
+    --wood-light: #b07b4c;
+    --paper: #f4f4f2;
+    --white: #ffffff;
+    --ink: #232428;
+    --ink-soft: #5b5d64;
+    --line: #e3e3df;
+    --radius: 10px;
+    --shadow: 0 10px 30px rgba(28, 29, 33, 0.12);
+    --shadow-sm: 0 4px 14px rgba(28, 29, 33, 0.10);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  /* ---------- Signature signage typography ---------- */
+  .signage {
+    font-family: "Arial Black", "Arial Bold", Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .section-title {
+    font-family: "Arial Black", "Arial Bold", Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    color: var(--charcoal);
+  }
+
+  .section-kicker {
+    display: inline-block;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    color: var(--amber-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-intro {
+    max-width: 62ch;
+    color: var(--ink-soft);
+    margin-top: 0.75rem;
+  }
+
+  .section-intro.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ============================================================
+     HEADER / NAV
+     ============================================================ */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--charcoal);
+    border-bottom: 4px solid var(--amber);
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 64px;
+  }
+
+  .brand {
+    color: var(--white);
+    text-decoration: none;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    letter-spacing: 0.07em;
+    white-space: nowrap;
+    line-height: 1.2;
+  }
+
+  .brand small {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.58rem;
+    letter-spacing: 0.28em;
+    color: var(--amber);
+  }
+
+  nav.tabs {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .tab-btn {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: #c9cad0;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    padding: 0.85rem 0.9rem;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .tab-btn:hover { color: var(--white); }
+
+  .tab-btn.active {
+    color: var(--amber);
+    border-bottom-color: var(--amber);
+  }
+
+  .nav-toggle {
+    display: none;
+    appearance: none;
+    background: transparent;
+    border: 2px solid var(--amber);
+    border-radius: 6px;
+    color: var(--amber);
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+  }
+
+  /* ============================================================
+     PAGE VIEWS (tabbed sections)
+     ============================================================ */
+  .page { display: none; }
+  .page.active { display: block; animation: fadeUp 0.35s ease; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  section.block { padding: 3.5rem 0; }
+  section.block.tight { padding-top: 0; }
+
+  /* ============================================================
+     HERO — recreates the physical storefront signage:
+     dark horizontal siding, white roofline trim, gooseneck-lit
+     white Arial Black lettering with wide word gaps.
+     ============================================================ */
+  .hero {
+    position: relative;
+    background:
+      repeating-linear-gradient(
+        180deg,
+        var(--charcoal-2) 0px,
+        var(--charcoal-2) 26px,
+        rgba(0,0,0,0.35) 27px,
+        var(--charcoal-2) 28px
+      ),
+      var(--charcoal);
+    color: var(--white);
+    text-align: center;
+    padding: clamp(3.5rem, 9vw, 6.5rem) 1.25rem clamp(3rem, 7vw, 5rem);
+    overflow: hidden;
+  }
+
+  /* soft gooseneck-light glow above the sign */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(900px, 90vw);
+    height: 260px;
+    background: radial-gradient(ellipse at top, rgba(255,255,255,0.14), transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero h1 {
+    position: relative;
+    font-size: clamp(1.6rem, 6vw, 4.2rem);
+    letter-spacing: 0.06em;
+    word-spacing: 0.35em;               /* the wide gaps on the building */
+    color: var(--white);
+    text-shadow: 0 3px 0 rgba(0,0,0,0.45), 0 8px 22px rgba(0,0,0,0.5);
+    line-height: 1.15;
+  }
+
+  .hero .est {
+    position: relative;
+    display: inline-block;
+    margin-top: 1.1rem;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: clamp(0.75rem, 1.6vw, 1rem);
+    color: var(--white);
+    padding: 0.4rem 1.2rem;
+    border-top: 2px solid var(--amber);
+    border-bottom: 2px solid var(--amber);
+  }
+
+  .hero .hero-sub {
+    position: relative;
+    max-width: 58ch;
+    margin: 1.5rem auto 0;
+    color: #b9bac1;
+    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  }
+
+  .hero-ctas {
+    position: relative;
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.9rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-block;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.9rem 1.6rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.12s, box-shadow 0.12s, background 0.15s;
+  }
+
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.25); }
+
+  .btn-amber { background: var(--amber); color: var(--charcoal); }
+  .btn-amber:hover { background: #ffb32b; }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.55);
+  }
+  .btn-outline:hover { border-color: var(--white); }
+
+  .btn-dark { background: var(--charcoal); color: var(--white); }
+  .btn-dark:hover { background: var(--charcoal-3); }
+
+  /* ============================================================
+     STORE INFO BAR
+     ============================================================ */
+  .info-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .info-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .info-item { display: flex; gap: 0.7rem; align-items: flex-start; }
+
+  .info-item .ico {
+    flex: 0 0 auto;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: var(--charcoal);
+    color: var(--amber);
+    display: grid;
+    place-items: center;
+    font-size: 1.05rem;
+  }
+
+  .info-item h4 {
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+  }
+
+  .info-item p { font-weight: bold; font-size: 0.92rem; line-height: 1.35; }
+
+  /* Business-hours sign feature + lightbox */
+  .hours-feature {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .hours-sign {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    cursor: zoom-in;
+    transition: transform 0.15s;
+  }
+
+  .hours-sign:hover { transform: scale(1.02); }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(28, 29, 33, 0.88);
+    place-items: center;
+    padding: 2rem;
+  }
+
+  .lightbox.open { display: grid; }
+
+  .lightbox img {
+    max-height: 90vh;
+    max-width: 90vw;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.1rem;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.65);
+    color: var(--white);
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 1.15rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.12s;
+  }
+
+  .lightbox-close:hover { background: rgba(255,255,255,0.25); transform: scale(1.06); }
+
+  .lightbox-stage { position: relative; line-height: 0; }
+
+  /* invisible letter hotspots on the sign */
+  .egg-spot {
+    position: absolute;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: default;
+  }
+
+  /* SAM's rock-on sprite (11-frame strip) */
+  .sam-sprite {
+    --fw: min(210px, 40vw);
+    position: absolute;
+    left: 50%;
+    bottom: 2.5%;
+    width: var(--fw);
+    aspect-ratio: 250 / 400;
+    transform: translateX(-50%);
+    background: url('sam-sprite.png') no-repeat 0 0;
+    background-size: auto 100%;
+    display: none;
+    filter: drop-shadow(0 14px 20px rgba(0,0,0,0.55));
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.35s;
+  }
+
+  .sam-sprite.show {
+    display: block;
+    animation: sam-pop 0.35s ease-out, sam-rock 1.4s steps(11) infinite;
+  }
+
+  .sam-sprite.fade { opacity: 0; }
+
+  @keyframes sam-pop {
+    from { transform: translateX(-50%) scale(0.2); opacity: 0; }
+  }
+
+  @keyframes sam-rock {
+    to { background-position-x: calc(var(--fw) * -11); }
+  }
+
+  /* ============================================================
+     CARDS / GRIDS
+     ============================================================ */
+  .grid { display: grid; gap: 1.25rem; margin-top: 2rem; }
+  .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+  .card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+
+  .card .card-top {
+    height: 6px;
+    background: var(--amber);
+  }
+
+  .card .card-body { padding: 1.4rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
+
+  .card .glyph {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: var(--charcoal);
+    color: var(--amber);
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+  }
+
+  .card h3 {
+    font-family: "Arial Black", Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1rem;
+    color: var(--charcoal);
+  }
+
+  .card p { color: var(--ink-soft); font-size: 0.92rem; }
+
+  .card .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; padding-top: 0.6rem; }
+
+  .tag {
+    font-size: 0.68rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    border-radius: 999px;
+    padding: 0.25rem 0.7rem;
+  }
+
+  /* ============================================================
+     CALLOUT
+     ============================================================ */
+  .callout {
+    margin-top: 2.5rem;
+    background: var(--charcoal);
+    border-left: 8px solid var(--amber);
+    border-radius: var(--radius);
+    color: var(--white);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    box-shadow: var(--shadow);
+  }
+
+  .callout h3 {
+    font-family: "Arial Black", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 1.2rem;
+    margin-bottom: 0.35rem;
+    color: var(--amber);
+  }
+
+  .callout p { color: #c9cad0; max-width: 60ch; font-size: 0.95rem; }
+
+  /* ============================================================
+     RENTAL PROCESS STEPS
+     ============================================================ */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2rem; }
+
+  .step {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.4rem;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+  }
+
+  .step .num {
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 2rem;
+    color: var(--amber);
+    line-height: 1;
+  }
+
+  .step h4 {
+    font-family: "Arial Black", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    margin: 0.6rem 0 0.35rem;
+  }
+
+  .step p { font-size: 0.85rem; color: var(--ink-soft); }
+
+  /* ---------- rental full-list dropdown ---------- */
+  .rent-list { margin-top: 0.2rem; }
+
+  .rent-list summary {
+    font-family: "Arial Black", Arial, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.7rem;
+    color: var(--amber-dark);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .rent-list summary:hover { color: var(--charcoal); }
+
+  .rent-list[open] summary { margin-bottom: 0.45rem; }
+
+  .rent-list ul {
+    margin: 0 0 0.25rem 1.15rem;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+  }
+
+  .rent-list li { margin-bottom: 0.15rem; }
+
+  /* ---------- rental rate line ---------- */
+  .rate-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    border-top: 1px solid var(--line);
+    margin-top: auto;
+    padding-top: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .rate-row b { color: var(--charcoal); }
+  .rate-row span { color: var(--ink-soft); }
+
+  /* ============================================================
+     U-HAUL SECTION FLAVOR
+     ============================================================ */
+  /* Renter Center sign photo as the rentals page title */
+  .rental-sign-title { margin: 0.5rem 0 0.25rem; line-height: 0; text-align: center; }
+
+  .rental-sign-img {
+    width: min(560px, 100%);
+    height: auto;
+    border-radius: 6px;
+    box-shadow: var(--shadow);
+  }
+
+  /* Real photos in the card grids */
+  .site-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* full-width panoramic photo — shown uncropped */
+  .site-photo.pano {
+    grid-column: 1 / -1;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
+  /* Actual U-Haul dealer logo as the page title */
+  .uhaul-logo-title { margin-bottom: 0.5rem; line-height: 0; text-align: center; }
+
+  .uhaul-logo-img {
+    width: min(460px, 92%);
+    height: auto;
+    /* logo has a white background — multiply blends it into the page */
+    mix-blend-mode: multiply;
+  }
+
+  .uhaul-banner {
+    margin-top: 2rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+    background: var(--white);
+  }
+
+  .uhaul-banner .stripe {
+    height: 10px;
+    background: repeating-linear-gradient(90deg, var(--amber) 0 40px, var(--charcoal) 40px 80px);
+  }
+
+  .uhaul-banner .inner {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .uhaul-banner h3 {
+    font-family: "Arial Black", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1.25rem;
+  }
+
+  .uhaul-banner p { color: var(--ink-soft); max-width: 58ch; font-size: 0.95rem; }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  footer {
+    background: var(--charcoal);
+    color: #b9bac1;
+    border-top: 6px solid var(--amber);
+    margin-top: 4rem;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  footer .f-brand {
+    color: var(--white);
+    font-size: 1rem;
+    letter-spacing: 0.07em;
+    line-height: 1.3;
+  }
+
+  footer .f-brand small {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.28em;
+    font-size: 0.6rem;
+    color: var(--amber);
+    margin-top: 0.3rem;
+  }
+
+  footer h5 {
+    font-family: "Arial Black", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.72rem;
+    color: var(--white);
+    margin-bottom: 0.8rem;
+  }
+
+  footer ul { list-style: none; }
+  footer li { margin-bottom: 0.45rem; font-size: 0.88rem; }
+
+  footer a { color: #b9bac1; text-decoration: none; }
+  footer a:hover { color: var(--amber); }
+
+  .footer-base {
+    border-top: 1px solid var(--charcoal-3);
+    text-align: center;
+    padding: 1.1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* ============================================================
+     RESPONSIVE
+     ============================================================ */
+  @media (max-width: 900px) {
+    .grid.cols-3, .grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .info-bar-inner { gap: 2rem; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .nav-inner { flex-wrap: wrap; padding-bottom: 0.5rem; }
+    .nav-toggle { display: block; }
+    nav.tabs {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      padding-bottom: 0.5rem;
+    }
+    nav.tabs.open { display: flex; }
+    .tab-btn { text-align: left; border-bottom: none; border-left: 3px solid transparent; }
+    .tab-btn.active { border-left-color: var(--amber); }
+
+    .grid.cols-2, .grid.cols-3, .grid.cols-4 { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .hours-feature { grid-template-columns: 1fr; padding: 1.5rem; gap: 1.5rem; }
+    .info-bar-inner { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .hero h1 {
+      font-size: clamp(1.15rem, 5.6vw, 2rem);
+      word-spacing: 0.2em;
+      letter-spacing: 0.045em;
+      white-space: nowrap;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="nav-inner">
+    <a href="#" class="brand signage" data-page="home">
+      Sterns Lumber Co., Inc.
+      <small>EST. 1838</small>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainTabs">Menu</button>
+    <nav class="tabs" id="mainTabs" aria-label="Main navigation">
+      <button class="tab-btn active" data-page="home">Home</button>
+      <button class="tab-btn" data-page="lumber">Lumber &amp; Building Supplies</button>
+      <button class="tab-btn" data-page="rentals">Rental Equipment</button>
+      <button class="tab-btn" data-page="uhaul">U-Haul Services</button>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================================================
+     PAGE: HOME
+     ============================================================ -->
+<main>
+<div class="page active" id="page-home">
+
+  <!-- Hero: recreation of the physical storefront signage -->
+  <section class="hero">
+    <h1 class="signage">Sterns Lumber Co., Inc.</h1>
+    <div class="est">Est. 1838</div>
+    <p class="hero-sub">
+      Your local yard for lumber, hardware, equipment rentals, propane, and U-Haul —
+      serving contractors and DIYers for generations.
+    </p>
+    <div class="hero-ctas">
+      <a href="#" class="btn btn-amber" data-page="lumber">Shop Lumber &amp; Building Supplies</a>
+      <a href="#" class="btn btn-outline" data-page="rentals">Rent Equipment</a>
+    </div>
+  </section>
+
+  <!-- Store info bar -->
+  <div class="info-bar">
+    <div class="info-bar-inner">
+      <div class="info-item">
+        <div class="ico">📍</div>
+        <div>
+          <h4>Address</h4>
+          <p>40 Balsam Dr<br>Millinocket, ME 04462</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="ico">📞</div>
+        <div>
+          <h4>Phone</h4>
+          <p>(207) 723-5144</p>
+        </div>
+      </div>
+      <a href="tel:2077235144" class="btn btn-dark">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Store hours -->
+  <section class="block">
+    <div class="container">
+      <span class="section-kicker">Open 7 Days A Week</span>
+      <h2 class="section-title">Store Hours</h2>
+      <div class="hours-feature">
+        <img src="Sterns%20Hours%20Filled.png"
+             alt="Business hours: Monday through Friday 7:30 AM to 5:00 PM, Saturday 8:00 AM to 4:00 PM, Sunday 8:00 AM to 12:00 PM"
+             class="hours-sign" id="hoursThumb">
+        <div>
+          <h3 class="signage" style="font-size:1.15rem; color:var(--charcoal); margin-bottom:0.6rem;">Early For The Crews, Open For The Weekend</h3>
+          <p style="color:var(--ink-soft); max-width:52ch;">
+            Doors open at 7:30 on weekdays so contractors can load up before the job,
+            and we're here Saturday and Sunday morning for the DIY projects.
+            Tap the sign to see it full size.
+          </p>
+          <div style="margin-top:1.4rem; display:flex; gap:0.9rem; flex-wrap:wrap;">
+            <a href="tel:2077235144" class="btn btn-dark">Call The Store</a>
+            <a href="#" class="btn btn-amber" data-page="lumber">See What We Stock</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick services -->
+  <section class="block tight">
+    <div class="container">
+      <span class="section-kicker">Quick Services</span>
+      <h2 class="section-title">In &amp; Out, Job Done</h2>
+      <p class="section-intro">
+        The two things folks swing by for most — pull up, we'll take care of the rest.
+      </p>
+      <div class="grid cols-2">
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🔥</div>
+            <h3>Propane Tank Refills</h3>
+            <p>
+              Drive up with your grill or heater tank and we'll refill it on the spot —
+              no swapping, you keep your own tank and only pay for the gas you get.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Grill Tanks</span>
+              <span class="tag">Forklift</span>
+              <span class="tag">While You Wait</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🚚</div>
+            <h3>Lumber Delivery Services</h3>
+            <p>
+              Full loads straight to your jobsite or driveway. Dimensional lumber, decking,
+              sheet goods — call in your order and we'll get it rolling.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Jobsite Drops</span>
+              <span class="tag">Local Radius</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo strip -->
+  <section class="block">
+    <div class="container">
+      <span class="section-kicker">The Yard</span>
+      <h2 class="section-title">Around The Store</h2>
+      <div class="grid cols-3">
+        <img src="photo-storefront.jpg" alt="Sterns Lumber Co., Inc. store front on a sunny day" class="site-photo">
+        <img src="photo-wheelbarrows.jpg" alt="Wheelbarrow display lined up against the store siding" class="site-photo">
+        <img src="photo-chairs.jpg" alt="Colorful Adirondack chairs stacked on the display deck" class="site-photo">
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============================================================
+     PAGE: LUMBER & HARDWARE
+     ============================================================ -->
+<div class="page" id="page-lumber">
+  <section class="block">
+    <div class="container">
+      <span class="section-kicker">Full-Line Yard &amp; Store</span>
+      <h2 class="section-title">Lumber &amp; Building Supplies</h2>
+      <p class="section-intro">
+        From Sterling pine to Zip System sheathing — the yard out back is stocked deep,
+        priced straight, and loaded for you.
+      </p>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🪵</div>
+            <h3>Dimensional &amp; Trim Lumber</h3>
+            <p>Sterling &amp; Select pine 1×4–1×10, primed pine in 16' lengths, and T&amp;G and shiplap boards.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Sterling Pine 1×4–1×10 — 6' to 16'</li>
+                <li>Select Pine 1×4–1×10 — 8' to 16'</li>
+                <li>Primed Pine 16' — 1×4 to 1×12, 5/4×6 &amp; 5/4×8</li>
+                <li>1×6 Tongue &amp; Groove Pine — 8' to 16'</li>
+                <li>1×10 Shiplap — 8' to 16'</li>
+                <li>PVC Lumber 18' — 1×4 to 1×10</li>
+                <li>Cedar, Oak &amp; Douglas Fir</li>
+                <li>Full line of moulding in stock</li>
+              </ul>
+            </details>
+            <div class="tag-row"><span class="tag">Pine</span><span class="tag">PVC</span><span class="tag">Moulding</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🧱</div>
+            <h3>Plywood &amp; Sheet Goods</h3>
+            <p>CD &amp; AC plywood, OSB sheathing, and Zip System — full 4×8 sheets ready to load.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>CD Plywood — ½", ⅝", ¾"</li>
+                <li>AC Plywood — ⅜", ½", ⅝", ¾"</li>
+                <li>Pressure-Treated Plywood — ½", ¾"</li>
+                <li>T-111 Plywood — ⅝"</li>
+                <li>OSB Sheathing — 7/16", ⅝"</li>
+                <li>Tongue &amp; Groove OSB — ¾"</li>
+                <li>Zip System Sheathing — 7/16", ⅝"</li>
+                <li>¼" Luan, FRP Board &amp; specialty plywood</li>
+              </ul>
+            </details>
+            <div class="tag-row"><span class="tag">CD / AC</span><span class="tag">OSB</span><span class="tag">Zip System</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">⬜</div>
+            <h3>Drywall &amp; Sheetrock</h3>
+            <p>Standard sheetrock in 4×8 and 4×12, plus moisture-resistant and FireShield board.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Standard Sheetrock 4×8 — ⅜", ½"</li>
+                <li>Standard Sheetrock 4×12 — ½"</li>
+                <li>Moisture Resistant 4×8 — ½"</li>
+                <li>FireShield 4×8 — ⅝"</li>
+              </ul>
+            </details>
+            <div class="tag-row"><span class="tag">4×8 &amp; 4×12</span><span class="tag">FireShield</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🏡</div>
+            <h3>Decking, Fencing &amp; Outdoors</h3>
+            <p>Composite decking in a variety of styles and colors, plus PT balusters and pre-cut stair stringers.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Composite decking — variety of styles &amp; colors</li>
+                <li>Pressure-Treated Balusters</li>
+                <li>Stair Stringers — 3, 4 &amp; 5-step</li>
+                <li>Lattice 4×8 — vinyl &amp; pressure-treated</li>
+                <li>Stock Fencing</li>
+                <li>Grade Stakes</li>
+              </ul>
+            </details>
+            <div class="tag-row"><span class="tag">Composite</span><span class="tag">PT</span><span class="tag">Lattice</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🏠</div>
+            <h3>Roofing, Siding &amp; Exterior</h3>
+            <p>IKO architectural &amp; 3-tab shingles in assorted colors, plus white vinyl siding.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>IKO Cambridge architectural shingles</li>
+                <li>IKO Marathon 3-tab shingles</li>
+                <li>Cedar shingles</li>
+                <li>Ice &amp; Water Shield, felt paper</li>
+                <li>Rolled roofing — charcoal black &amp; economy</li>
+                <li>⅝" white vinyl siding</li>
+                <li>J-channel, corners &amp; starter strips</li>
+                <li>Soffit — perforated &amp; non-perforated</li>
+                <li>Gutters &amp; downspouts</li>
+              </ul>
+            </details>
+            <div class="tag-row"><span class="tag">IKO</span><span class="tag">Vinyl Siding</span><span class="tag">Cedar</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🌡️</div>
+            <h3>Insulation</h3>
+            <p>Fiberglass R-13 &amp; R-19 rolls and batts, plus Rockwool and rigid foam board.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Fiberglass R-13 &amp; R-19 — faced &amp; unfaced</li>
+                <li>Rockwool mineral wool batts</li>
+                <li>Styrofoam board 4×8 — 1", 1½", 2"</li>
+                <li>Foil-sided rigid insulation board</li>
+              </ul>
+            </details>
+            <div class="tag-row"><span class="tag">R-13 / R-19</span><span class="tag">Rockwool</span><span class="tag">Rigid Board</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🏗️</div>
+            <h3>Concrete, Masonry &amp; Footings</h3>
+            <p>80 lb concrete mix, cinder blocks, and cement tubes for footings and foundations.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>80 lb Concrete Mix &amp; Mortar Mix</li>
+                <li>Cinder Blocks &amp; solid blocks — 2", 4"</li>
+                <li>Chimney Blocks — 8×12 &amp; 8×16</li>
+                <li>8×12 Flue Tile</li>
+                <li>11×11 Elephant Feet &amp; 8" cement tubes</li>
+                <li>Concrete &amp; regular bricks</li>
+                <li>18×6 Rounders</li>
+              </ul>
+            </details>
+            <div class="tag-row"><span class="tag">Bagged Mix</span><span class="tag">Block</span><span class="tag">Brick</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🚪</div>
+            <h3>Windows &amp; Doors</h3>
+            <p>In-stock selection on hand, and custom orders available for anything we don't carry.</p>
+            <div class="tag-row"><span class="tag">In Stock</span><span class="tag">Custom Order</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🔩</div>
+            <h3>Fasteners</h3>
+            <p>Screws by the box or by the pound, nails by the box, and nuts and bolts sold individually — plus structural hardware.</p>
+            <div class="tag-row"><span class="tag">Screws: Box / Pound</span><span class="tag">Nails: Box</span><span class="tag">Nuts &amp; Bolts: Each</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🛠️</div>
+            <h3>Power Tools</h3>
+            <p>Saws, drills, drivers, and accessories from the pro brands contractors trust.</p>
+            <div class="tag-row"><span class="tag">Milwaukee</span><span class="tag">Blades &amp; Bits</span><span class="tag">Batteries</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🎨</div>
+            <h3>Paint &amp; Supplies</h3>
+            <p>We mix paint in-store — interior and exterior colors matched while you shop, plus stains, brushes, rollers, and prep supplies.</p>
+            <div class="tag-row"><span class="tag">In-Store Mixing</span><span class="tag">Stains</span><span class="tag">Prep &amp; Tape</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery callout -->
+      <div class="callout">
+        <div>
+          <h3>We Deliver Local</h3>
+          <p>
+            Can't haul it? We can. Our trucks run local delivery routes for lumber, sheet
+            goods, and building materials — straight to the jobsite or your driveway.
+            Call ahead and we'll have it loaded and on the way.
+          </p>
+        </div>
+        <a href="tel:2077235144" class="btn btn-amber">Schedule A Delivery</a>
+      </div>
+
+      <!-- Photos -->
+      <div class="grid cols-2" style="margin-top:2.5rem;">
+        <img src="photo-delivery.jpg" alt="Sterns Lumber delivery flatbed loaded with lumber on a jobsite road" class="site-photo">
+        <img src="photo-trucks.jpg" alt="Sterns Lumber delivery trucks parked at the yard" class="site-photo">
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     PAGE: RENTAL EQUIPMENT
+     ============================================================ -->
+<div class="page" id="page-rentals">
+  <section class="block">
+    <div class="container">
+      <div style="text-align:center;"><span class="section-kicker">Daily &amp; Weekly Rates</span></div>
+      <h2 class="rental-sign-title">
+        <img src="Rental%20Sign%20Straight.png" alt="Renter Center" class="rental-sign-img">
+      </h2>
+      <p class="section-intro center">
+        Pro-grade machines and tools without the pro-grade price tag. Rent by the day
+        or by the week — maintained, fueled, and ready to work.
+      </p>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🧱</div>
+            <h3>Concrete &amp; Compaction</h3>
+            <p>Bo-Mag plate compactors, 36" power trowels, and electric or tow-behind concrete mixers.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Concrete floats — square &amp; round end</li>
+                <li>Concrete vibrator</li>
+                <li>Magnesium floats</li>
+                <li>Concrete rakes &amp; trowels</li>
+                <li>Vibrating screed head</li>
+                <li>Screed boards — 4.5, 8 &amp; 12 ft</li>
+                <li>Laser level kit</li>
+                <li>Site level &amp; stick</li>
+              </ul>
+            </details>
+            <div class="rate-row"><span>Daily / Weekly</span><b>Call for rates</b></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🔨</div>
+            <h3>Hammer Drills &amp; Breakers</h3>
+            <p>Bulldog hammer drills, electric breakers, and air rock hammers for demo work.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Hammer drill &amp; chisel sets</li>
+                <li>Electric breakers #60 &amp; turbo</li>
+                <li>Horizontal breaker</li>
+                <li>Air rock hammer &amp; drill</li>
+                <li>Air hose for air hammers</li>
+                <li>Tow-behind compressor</li>
+              </ul>
+            </details>
+            <div class="rate-row"><span>Daily / Weekly</span><b>Call for rates</b></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🪚</div>
+            <h3>Saws — Gas &amp; Electric</h3>
+            <p>14" gas demo saws, walk-behind concrete saw, and MK wet saws for tile and stone.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Milwaukee chain saw</li>
+                <li>7¼" electric circular saw</li>
+                <li>Milwaukee Sawzall</li>
+                <li>Milwaukee Hole Hawg</li>
+                <li>Hole saw &amp; wood bore kits</li>
+              </ul>
+            </details>
+            <div class="rate-row"><span>Daily / Weekly</span><b>Call for rates</b></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🌱</div>
+            <h3>Lawn &amp; Garden</h3>
+            <p>Front &amp; rear tine tillers, lawn aerator, and backpack blowers for yard season.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Mantis &amp; Maxim H.D. tillers</li>
+                <li>Lawn rollers &amp; hand tamper</li>
+                <li>Hand &amp; gas tree pruners</li>
+                <li>Electric &amp; gas hedge trimmers</li>
+                <li>Loppers &amp; axes</li>
+                <li>Little Wonder &amp; BravePro blowers</li>
+                <li>Billy Goat leaf eater</li>
+                <li>Lawn mower</li>
+                <li>Power brooms</li>
+              </ul>
+            </details>
+            <div class="rate-row"><span>Daily / Weekly</span><b>Call for rates</b></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🪓</div>
+            <h3>Landscape &amp; Logging</h3>
+            <p>20 &amp; 30-ton log splitters, 6" wood chipper, and a stump grinder for the big jobs.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Horizontal log splitters</li>
+                <li>One-man &amp; two-man post augers</li>
+                <li>Post hole auger bits 4"–12"</li>
+                <li>Gas brush saw</li>
+                <li>Ditch Witch</li>
+              </ul>
+            </details>
+            <div class="rate-row"><span>Daily / Weekly</span><b>Call for rates</b></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🧹</div>
+            <h3>Floor &amp; Carpet Care</h3>
+            <p>Drum &amp; edger sanders, Nobles carpet cleaner, and floor buffers for refinish jobs.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Carpet knee kicker &amp; stretcher</li>
+                <li>Carpet seaming iron</li>
+                <li>150 lb vinyl floor roller</li>
+                <li>Tile stripper</li>
+                <li>Square buff sander</li>
+                <li>Turbo air dryers &amp; dehumidifier</li>
+                <li>Nobles Typhoon wet vac</li>
+                <li>Sanding paper sold by the sheet</li>
+              </ul>
+            </details>
+            <div class="rate-row"><span>Daily / Weekly</span><b>Call for rates</b></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🛠️</div>
+            <h3>General Tools</h3>
+            <p>Milwaukee hammer drills, impact wrench, and tile cutters — plus the odd jobs kit.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Bosch heat gun &amp; 4" angle grinder</li>
+                <li>Belt, palm &amp; heavy-duty sanders</li>
+                <li>Variable speed polisher</li>
+                <li>Right angle drill &amp; drywall zip gun</li>
+                <li>Paint remover</li>
+                <li>Heavy duty hand scraper</li>
+                <li>Metal detector</li>
+              </ul>
+            </details>
+            <div class="rate-row"><span>Daily / Weekly</span><b>Call for rates</b></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">⚡</div>
+            <h3>Generators &amp; Heaters</h3>
+            <p>Ford 5250W &amp; 6250W generators and forced-air propane heaters up to 400K BTU.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Ford 5250W generator</li>
+                <li>Ford 6250W generator</li>
+                <li>Forced-air propane heaters 250K–400K BTU</li>
+              </ul>
+            </details>
+            <div class="rate-row"><span>Daily / Weekly</span><b>Call for rates</b></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🚰</div>
+            <h3>Plumbing</h3>
+            <p>Power snakes up to 100 ft, hand snakes, the Super Vee drain cleaner, and the water ram.</p>
+            <div class="rate-row"><span>Daily / Weekly</span><b>Call for rates</b></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">💦</div>
+            <h3>Pumps &amp; Pressure Washers</h3>
+            <p>A pressure washer, plus Tsurumi pumps from ¼ to ⅔ hp for moving water.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Pressure washer</li>
+                <li>Tsurumi pumps — ¼, ½ &amp; ⅔ hp</li>
+                <li>Discharge hoses 2" &amp; 3"</li>
+                <li>Pick up hoses 2" &amp; 3"</li>
+              </ul>
+            </details>
+            <div class="rate-row"><span>Daily / Weekly</span><b>Call for rates</b></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🪜</div>
+            <h3>Ladders &amp; Staging</h3>
+            <p>5'×7' H-frame staging and Baker staging.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Cross members</li>
+                <li>Coupling &amp; lock pins</li>
+                <li>Planking</li>
+                <li>Wheels &amp; levelers</li>
+              </ul>
+            </details>
+            <div class="rate-row"><span>Daily / Weekly</span><b>Call for rates</b></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🎪</div>
+            <h3>Party &amp; Banquet</h3>
+            <p>20'×30' canopy tent, the bounce room, and tables &amp; chairs for the whole crowd.</p>
+            <details class="rent-list">
+              <summary>See The Full List</summary>
+              <ul>
+                <li>Canopy tents</li>
+                <li>Bounce room</li>
+                <li>Round &amp; square tables</li>
+                <li>Folding chairs</li>
+              </ul>
+            </details>
+            <div class="rate-row"><span>Daily / Weekly</span><b>Call for rates</b></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rental process -->
+      <div style="margin-top:3rem;">
+        <span class="section-kicker">How It Works</span>
+        <h2 class="section-title" style="font-size:1.4rem;">Renting Is Simple</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h4>Call Or Stop In</h4>
+          <p>Check availability by phone or at the counter — we'll match the machine to the job.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h4>Reserve Your Dates</h4>
+          <p>Lock in a daily or weekly rate. ID and deposit required at pickup.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h4>Load Up &amp; Go</h4>
+          <p>We'll walk you through operation and help you load — fueled and ready.</p>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <h4>Bring It Back</h4>
+          <p>Return it on time and we'll check it in on the spot. That's it.</p>
+        </div>
+      </div>
+
+      <!-- Photos -->
+      <div class="grid cols-2" style="margin-top:2.5rem;">
+        <img src="photo-tractors.jpg" alt="Rental tractor and mini excavators lined up in front of the Building Center sign" class="site-photo">
+        <img src="photo-manlifts.jpg" alt="Towable boom lifts parked in front of the Sterns Lumber store" class="site-photo">
+        <img src="photo-tent.jpg" alt="Blue and white striped canopy tent set up with tables and chairs" class="site-photo">
+        <img src="photo-bouncehouse.jpg" alt="Sterns Lumber Renter Center bounce room set up on a lawn" class="site-photo">
+      </div>
+
+      <!-- Reservation CTA -->
+      <div class="callout">
+        <div>
+          <h3>Call Now &amp; Make A Reservation</h3>
+          <p>
+            Tell us the job and the dates — we'll have the right machine fueled,
+            checked, and waiting at the counter for you.
+          </p>
+        </div>
+        <a href="tel:2077235144" class="btn btn-amber">Call (207) 723-5144</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     PAGE: U-HAUL SERVICES
+     ============================================================ -->
+<div class="page" id="page-uhaul">
+  <section class="block">
+    <div class="container">
+      <h2 class="uhaul-logo-title">
+        <img src="Sterns%20Uhaul.webp" alt="U-Haul Authorized Dealer" class="uhaul-logo-img">
+      </h2>
+      <p class="section-intro center">
+        Sterns Lumber is your local authorized U-Haul dealer — trucks, trailers,
+        U-Box containers, and every moving supply you'll need, all in one stop.
+      </p>
+
+      <div class="grid cols-4">
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🚛</div>
+            <h3>Truck Rentals</h3>
+            <p>From cargo vans to 26-foot box trucks for moves across town or across the country.</p>
+            <div class="tag-row"><span class="tag">In-Town</span><span class="tag">One-Way</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🛻</div>
+            <h3>Trailer Rentals</h3>
+            <p>Cargo trailers, utility trailers, and auto transports — hitched and checked before you roll.</p>
+            <div class="tag-row"><span class="tag">Cargo</span><span class="tag">Utility</span><span class="tag">Auto</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">📦</div>
+            <h3>U-Box Dispatch &amp; Storage</h3>
+            <p>Portable moving and storage containers — delivered, stored, or shipped on your schedule.</p>
+            <div class="tag-row"><span class="tag">Delivery</span><span class="tag">Storage</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-top"></div>
+          <div class="card-body">
+            <div class="glyph">🧰</div>
+            <h3>Moving Supplies</h3>
+            <p>Boxes, tape, padding, mattress bags, and hand trucks stocked right at the counter.</p>
+            <div class="tag-row"><span class="tag">Boxes</span><span class="tag">Padding</span><span class="tag">Dollies</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reservation CTA -->
+      <div class="uhaul-banner">
+        <div class="stripe"></div>
+        <div class="inner">
+          <div>
+            <h3>Moving Day Coming Up?</h3>
+            <p>
+              Check truck and trailer availability for your dates — reserve ahead and your
+              equipment will be inspected, fueled, and waiting in the lot.
+            </p>
+          </div>
+          <div style="display:flex; gap:0.9rem; flex-wrap:wrap;">
+            <a href="tel:2077235144" class="btn btn-dark">Check Availability</a>
+            <a href="https://www.uhaul.com/Locations/Truck-Rentals-near-Millinocket-ME-04462/002344/" target="_blank" rel="noopener" class="btn btn-amber">Make A Reservation</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photos -->
+      <div class="grid cols-2" style="margin-top:2.5rem;">
+        <img src="photo-uhauls.jpg" alt="U-Haul truck fleet lined up at Sterns Lumber" class="site-photo pano">
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="f-brand signage">Sterns Lumber Co., Inc.<small>EST. 1838</small></div>
+      <p style="margin-top:1rem; font-size:0.88rem; max-width:40ch;">
+        Lumber, hardware, rentals, propane, and U-Haul — one yard, everything for the job.
+      </p>
+    </div>
+    <div>
+      <h5>Pages</h5>
+      <ul>
+        <li><a href="#" data-page="home">Home</a></li>
+        <li><a href="#" data-page="lumber">Lumber &amp; Building Supplies</a></li>
+        <li><a href="#" data-page="rentals">Rental Equipment</a></li>
+        <li><a href="#" data-page="uhaul">U-Haul Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Visit Us</h5>
+      <ul>
+        <li>40 Balsam Dr, Millinocket, ME 04462</li>
+        <li><a href="tel:2077235144">(207) 723-5144</a></li>
+        <li>Mon–Fri 7:30am–5pm</li>
+        <li>Sat 8am–4pm · Sun 8am–12pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-base">
+    © 2026 Sterns Lumber Co., Inc. · Est. 1838
+  </div>
+</footer>
+
+<div class="lightbox" id="hoursLightbox" role="dialog" aria-label="Business hours sign">
+  <button class="lightbox-close" id="hoursClose" aria-label="Close">&#10005;</button>
+  <div class="lightbox-stage">
+    <img src="Sterns%20Hours%20Filled.png" alt="Business hours sign, enlarged">
+    <button class="egg-spot" data-egg="s" style="left:12.1%; top:64.3%; width:4.3%; height:6.6%;" tabindex="-1" aria-hidden="true"></button>
+    <button class="egg-spot" data-egg="a" style="left:16.6%; top:64.3%; width:4.4%; height:6.6%;" tabindex="-1" aria-hidden="true"></button>
+    <button class="egg-spot" data-egg="m" style="left:10.8%; top:21.7%; width:6.7%; height:6.8%;" tabindex="-1" aria-hidden="true"></button>
+    <div class="sam-sprite" id="samSprite"></div>
+  </div>
+</div>
+
+<script>
+  // ---------- Hours sign lightbox ----------
+  const hoursThumb = document.getElementById('hoursThumb');
+  const hoursLightbox = document.getElementById('hoursLightbox');
+  const hoursClose = document.getElementById('hoursClose');
+  const samSprite = document.getElementById('samSprite');
+
+  let samTimer = null;
+
+  function hideSam() {
+    clearTimeout(samTimer);
+    samSprite.classList.remove('show', 'fade');
+  }
+
+  function showSam() {
+    hideSam();
+    void samSprite.offsetWidth;            // restart animation if re-triggered
+    samSprite.classList.add('show');
+    samTimer = setTimeout(() => {
+      samSprite.classList.add('fade');     // ~6s on stage, then fade out
+      samTimer = setTimeout(hideSam, 400);
+    }, 5600);
+  }
+
+  function closeHours() {
+    hoursLightbox.classList.remove('open');
+    hideSam();
+    eggProgress = 0;
+  }
+
+  hoursThumb.addEventListener('click', () => hoursLightbox.classList.add('open'));
+  hoursClose.addEventListener('click', closeHours);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeHours();
+  });
+
+  // ---------- Easter egg: spell S-A-M on the sign ----------
+  const eggSeq = ['s', 'a', 'm'];
+  let eggProgress = 0;
+
+  document.querySelectorAll('.egg-spot').forEach(spot => {
+    spot.addEventListener('click', () => {
+      if (spot.dataset.egg === eggSeq[eggProgress]) {
+        eggProgress++;
+        if (eggProgress === eggSeq.length) {
+          showSam();
+          eggProgress = 0;
+        }
+      } else {
+        // wrong letter restarts (an S always counts as a fresh start)
+        eggProgress = spot.dataset.egg === eggSeq[0] ? 1 : 0;
+        hideSam();
+      }
+    });
+  });
+
+  // ---------- Tabbed page navigation ----------
+  const pages = document.querySelectorAll('.page');
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const navToggle = document.getElementById('navToggle');
+  const tabsNav = document.getElementById('mainTabs');
+
+  function showPage(name) {
+    pages.forEach(p => p.classList.toggle('active', p.id === 'page-' + name));
+    tabButtons.forEach(b => b.classList.toggle('active', b.dataset.page === name));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    tabsNav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    if (history.replaceState) history.replaceState(null, '', '#' + name);
+  }
+
+  // Any element with data-page navigates (tabs, hero CTAs, footer links, brand)
+  document.querySelectorAll('[data-page]').forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      showPage(el.dataset.page);
+    });
+  });
+
+  // Mobile menu toggle
+  navToggle.addEventListener('click', () => {
+    const open = tabsNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+
+  // Deep-link support: open #rentals etc. directly
+  const initial = location.hash.replace('#', '');
+  if (initial && document.getElementById('page-' + initial)) showPage(initial);
+</script>
+
+</body>
+</html>
